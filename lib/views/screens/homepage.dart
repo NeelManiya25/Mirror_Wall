@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:pr_mirro_well/controllers/providers/connectivity_provider.dart';
-
 import 'package:provider/provider.dart';
 
 class Homepage extends StatefulWidget {
@@ -325,8 +324,11 @@ class _HomepageState extends State<Homepage> {
                                               SearchController.text;
                                           inAppWebViewController?.loadUrl(
                                             urlRequest: URLRequest(
-                                              url: Uri.parse(
-                                                  "${link}search?q=$newLink"),
+                                              url: (SelectedOption.isEmpty)
+                                                  ? Uri.parse(
+                                                      "https://www.google.com/")
+                                                  : Uri.parse(
+                                                      "${link}search?q=$newLink"),
                                             ),
                                           );
                                         },
