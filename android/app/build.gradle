@@ -30,8 +30,8 @@ android {
     ndkVersion flutter.ndkVersion
 
     compileOptions {
-        sourceCompatibility 17
-        targetCompatibility 33
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     kotlinOptions {
@@ -48,7 +48,7 @@ android {
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdkVersion 21
-        targetSdkVersion flutter.targetSdkVersion
+        targetSdkVersion 33
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }

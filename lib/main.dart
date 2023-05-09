@@ -13,6 +13,7 @@ void main() async {
     await AndroidInAppWebViewController.setWebContentsDebuggingEnabled(true);
   }
 
+
   runApp(
     MultiProvider(
       providers: [
